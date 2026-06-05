@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IA y educación | PR2</title>
+    <meta
+      name="description"
+      content="Visualización narrativa sobre adopción de inteligencia artificial en educación, preparación docente, infraestructura digital y resultados académicos."
+    >
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260605b">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Navegación principal">
+      <a class="brand" href="#inicio">IA y educación</a>
+      <nav aria-label="Secciones">
+        <a href="#adopcion">Adopción</a>
+        <a href="#formacion">Formación</a>
+        <a href="#preparacion">Preparación</a>
+        <a href="#resultados">Resultados</a>
+        <a href="#percepciones">Percepciones</a>
+        <a href="#cierre">Cierre</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-copy">
+          <p class="eyebrow">PR2 · Proyecto de visualización</p>
+          <h1>Cómo está cambiando la IA el mundo educativo</h1>
+          <p class="lead">
+            Una visualización global que combina TALIS 2024, PISA 2022 y ODS 4
+            para observar adopción docente de IA, formación, barreras,
+            infraestructura digital y resultados académicos.
+          </p>
+        </div>
+
+        <div class="control-surface" aria-label="Controles de la visualización">
+          <div>
+            <span class="control-label">Materia PISA</span>
+            <div class="segmented" id="subject-controls"></div>
+          </div>
+          <div>
+            <span class="control-label">Foco territorial</span>
+            <div class="segmented" id="region-controls"></div>
+          </div>
+        </div>
+
+        <div class="kpi-strip" id="kpi-strip" aria-label="Indicadores principales"></div>
+      </section>
+
+      <section class="story-section" id="adopcion">
+        <div class="section-copy">
+          <p class="eyebrow">1 · Adopción</p>
+          <h2>La IA ya ha entrado en las aulas, pero no al mismo ritmo.</h2>
+          <p>
+            TALIS 2024 pregunta al profesorado si ha usado IA en su trabajo.
+            La diferencia entre sistemas es muy amplia: algunos superan el 70%,
+            mientras otros siguen por debajo del 20%.
+          </p>
+        </div>
+        <div class="chart-panel">
+          <div class="panel-heading">
+            <div>
+              <h3>Uso de IA por profesorado</h3>
+              <p>Porcentaje de docentes de secundaria obligatoria que declaran haber usado IA.</p>
+            </div>
+          </div>
+          <p id="adoption-insight" class="chart-insight"></p>
+          <div
+            id="adoption-chart"
+            class="chart tall"
+            role="img"
+            aria-label="Ranking de uso de IA por profesorado"
+            aria-describedby="adoption-insight adoption-data"
+          ></div>
+          <details class="data-details">
+            <summary>Datos del gráfico</summary>
+            <div id="adoption-data"></div>
+          </details>
+        </div>
+      </section>
+
+      <section class="story-section accent-band" id="formacion">
+        <div class="section-copy">
+          <p class="eyebrow">2 · Formación docente</p>
+          <h2>Usar IA no significa estar preparado para usarla bien.</h2>
+          <p>
+            La visualización compara dos señales: profesorado que recibió
+            formación sobre IA y profesorado que declara una necesidad alta de
+            aprender a usarla para enseñar y aprender.
+          </p>
+        </div>
+        <div class="chart-panel">
+          <div class="panel-heading">
+            <div>
+              <h3>Formación recibida y necesidad declarada</h3>
+              <p>Porcentaje de docentes, TALIS 2024.</p>
+            </div>
+          </div>
+          <p id="training-insight" class="chart-insight"></p>
+          <div
+            id="training-chart"
+            class="chart tall"
+            role="img"
+            aria-label="Comparación entre formación en IA y necesidad de formación"
+            aria-describedby="training-insight training-data"
+          ></div>
+          <details class="data-details">
+            <summary>Datos del gráfico</summary>
+            <div id="training-data"></div>
+          </details>
+        </div>
+      </section>
+
+      <section class="story-section" id="preparacion">
+        <div class="section-copy">
+          <p class="eyebrow">3 · Preparación digital</p>
+          <h2>La infraestructura es condición necesaria, no explicación suficiente.</h2>
+          <p>
+            ODS 4 mide si los centros tienen internet y ordenadores para fines
+            pedagógicos. Esta capa permite distinguir entre acceso tecnológico
+            básico y adopción real de IA por parte del profesorado.
+          </p>
+        </div>
+        <div class="chart-panel">
+          <div class="panel-heading">
+            <div>
+              <h3>Infraestructura escolar y adopción de IA</h3>
+              <p>Promedio de internet y ordenadores pedagógicos frente a uso docente de IA.</p>
+            </div>
+          </div>
+          <p id="readiness-insight" class="chart-insight"></p>
+          <div
+            id="readiness-chart"
+            class="chart tall"
+            role="img"
+            aria-label="Dispersión entre infraestructura digital y uso docente de IA"
+            aria-describedby="readiness-insight readiness-data"
+          ></div>
+          <details class="data-details">
+            <summary>Datos del gráfico</summary>
+            <div id="readiness-data"></div>
+          </details>
+        </div>
+      </section>
+
+      <section class="story-section accent-band" id="resultados">
+        <div class="section-copy">
+          <p class="eyebrow">4 · Resultados académicos</p>
+          <h2>El impacto no puede leerse como una relación directa.</h2>
+          <p>
+            PISA aporta la capa de rendimiento, pero los datos no prueban que
+            más uso de IA produzca mejores resultados. El gráfico sirve para
+            detectar perfiles y evitar una lectura causal simplista.
+          </p>
+        </div>
+        <div class="chart-panel">
+          <div class="panel-heading">
+            <div>
+              <h3 id="pisa-title">IA y rendimiento PISA 2022</h3>
+              <p>Uso docente de IA frente a puntuación media PISA.</p>
+            </div>
+          </div>
+          <p id="pisa-insight" class="chart-insight"></p>
+          <div
+            id="pisa-chart"
+            class="chart tall"
+            role="img"
+            aria-label="Dispersión entre uso de IA y resultados PISA"
+            aria-describedby="pisa-insight pisa-data"
+          ></div>
+          <details class="data-details">
+            <summary>Datos del gráfico</summary>
+            <div id="pisa-data"></div>
+          </details>
+        </div>
+      </section>
+
+      <section class="story-section" id="percepciones">
+        <div class="section-copy">
+          <p class="eyebrow">5 · Percepciones</p>
+          <h2>La IA se vive como oportunidad y como riesgo al mismo tiempo.</h2>
+          <p>
+            El selector permite explorar para qué se usa la IA, qué beneficios
+            se perciben y qué barreras aparecen. En España, la planificación de
+            clases convive con preocupaciones sobre autoría, errores y falta de
+            competencias.
+          </p>
+          <label class="select-label" for="country-select">País o sistema</label>
+          <select id="country-select" class="country-select"></select>
+        </div>
+        <div class="chart-panel">
+          <div class="panel-heading">
+            <div>
+              <h3 id="perception-title">Percepciones sobre la IA</h3>
+              <p>Porcentaje de docentes que declaran cada uso, beneficio, riesgo o barrera.</p>
+            </div>
+          </div>
+          <p id="perception-insight" class="chart-insight"></p>
+          <div
+            id="perception-chart"
+            class="metric-grid"
+            role="img"
+            aria-label="Usos, beneficios, riesgos y barreras de la IA educativa"
+            aria-describedby="perception-insight perception-data"
+          ></div>
+          <details class="data-details">
+            <summary>Datos del gráfico</summary>
+            <div id="perception-data"></div>
+          </details>
+        </div>
+      </section>
+
+      <section class="story-section accent-band" id="sintesis">
+        <div class="section-copy">
+          <p class="eyebrow">6 · Síntesis</p>
+          <h2>La pregunta no es solo quién usa IA, sino con qué condiciones.</h2>
+          <p>
+            La tabla reúne adopción, formación, infraestructura y rendimiento.
+            El objetivo es comparar perfiles educativos, no convertir la IA en
+            una única nota de éxito.
+          </p>
+        </div>
+        <div class="table-panel">
+          <div class="panel-heading">
+            <div>
+              <h3>Resumen comparativo</h3>
+              <p id="summary-subtitle">Valores principales por país o sistema.</p>
+            </div>
+          </div>
+          <p id="summary-insight" class="chart-insight"></p>
+          <div class="table-scroll">
+            <table id="summary-table" aria-describedby="summary-insight">
+              <caption>Resumen comparativo de IA, preparación digital y resultados</caption>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing" id="cierre">
+        <div class="closing-copy">
+          <p class="eyebrow">Conclusión</p>
+          <h2>La IA ya afecta a la educación, pero su efecto depende del contexto.</h2>
+          <p>
+            La comparación muestra que la adopción docente es desigual, que la
+            formación marca diferencias y que la infraestructura digital no
+            basta por sí sola. Por eso la visualización separa uso, preparación,
+            percepciones y resultados, y evita presentar la IA como una causa
+            única del rendimiento académico.
+          </p>
+          <div class="takeaways">
+            <div>
+              <strong>Adopción</strong>
+              <span>la IA se usa de forma intensa en algunos sistemas y todavía poco en otros.</span>
+            </div>
+            <div>
+              <strong>Preparación</strong>
+              <span>la formación docente y las normas del centro condicionan el uso educativo.</span>
+            </div>
+            <div>
+              <strong>Cautela</strong>
+              <span>PISA ayuda a contextualizar, pero no demuestra causalidad con la IA.</span>
+            </div>
+          </div>
+          <p class="source-line">
+            Fuentes: OECD TALIS 2024 Results, OECD PISA 2022 Database y UNESCO UIS SDG 4 Education Indicators.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <div id="tooltip" class="tooltip" role="status" aria-live="polite" aria-hidden="true"></div>
+
+    <script src="assets/vendor/d3.min.js"></script>
+    <script src="assets/js/story.js?v=20260605e"></script>
+  </body>
+</html>
